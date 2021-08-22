@@ -31,8 +31,8 @@ logging.basicConfig(
 LOGS = logging.getLogger(__name__)
 
 # Extra details
-__version__ = "0.2.0"
-__author__ = "athphane"
+__version__ = "0.1.0"
+__author__ = "soukron"
 
 UserBot = UserBot(__version__)
 
@@ -56,16 +56,12 @@ ALLOWED_USERS = ast.literal_eval(
 # MISC APIs
 YOURLS_URL = config.get("misc", "yourls_url", fallback=None)
 YOURLS_KEY = config.get("misc", "yourls_key", fallback=None)
-YANDEX_API_KEY = config.get("yandex", "key", fallback=None)
-SPOTIFY_USERNAME = config.get("spotify", "username", fallback=None)
-SPOTIFY_CLIENT_ID = config.get("spotify", "client_id", fallback=None)
-SPOTIFY_CLIENT_SECRET = config.get(
-    "spotify", "client_secret", fallback=None)
 
 # Get the Values from our .env
-PM_PERMIT = config.get("pm_permit", "pm_permit")
-PM_LIMIT = int(config.get("pm_permit", "pm_limit"))
 LOG_GROUP = config.get("logs", "log_group")
+
+# Anime downloader
+ANIME_DOWNLOADS_DIR = config.get("anime", "downloads_dir", fallback="downloads")
 
 # Scheduler
 scheduler = AsyncIOScheduler()
